@@ -1,5 +1,12 @@
-/*Theme Name: MarkdownPressTheme URI: http://mzhou.me/Description: A clean and markdown looks like theme for WordPress.Author: mzhouVersion: 1.0Tags: white， one-columns， responsive*//* configs */
-/* vertical line */
+/*
+Theme Name: MarkdownPress
+Theme URI: http://mzhou.me/
+Description: A clean and markdown looks like theme for WordPress.
+Author: mzhou
+Version: 1.0
+Tags: white， one-columns， responsive
+
+*/
 .markdown {
   max-width: 600px;
   margin: 0 auto;
@@ -177,6 +184,11 @@
   left: 0;
   font-size: 14px;
   line-height: 28px;
+}
+.markdown blockquote p:first-child,
+.markdown blockquote p:last-child {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 .markdown strong {
   font-weight: bold;
