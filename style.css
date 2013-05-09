@@ -7,6 +7,8 @@ Version: 1.0
 Tags: white， one-columns， responsive
 
 */
+/* configs */
+/* vertical line */
 .markdown {
   max-width: 600px;
   margin: 0 auto;
@@ -186,7 +188,11 @@ Tags: white， one-columns， responsive
   line-height: 28px;
 }
 .markdown blockquote p:first-child,
-.markdown blockquote p:last-child {
+.markdown blockquote ul:first-child,
+.markdown blockquote ol:first-child,
+.markdown blockquote p:last-child,
+.markdown blockquote ul:last-child,
+.markdown blockquote ol:last-child {
   margin-top: 0;
   margin-bottom: 0;
 }
