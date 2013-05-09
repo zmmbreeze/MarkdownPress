@@ -1,0 +1,411 @@
+/*Theme Name: MarkdownPressTheme URI: http://mzhou.me/Description: A clean and markdown looks like theme for WordPress.Author: mzhouVersion: 1.0Tags: white， one-columns， responsive*//* configs */
+/* vertical line */
+.markdown {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0;
+  word-wrap: break-word;
+  background: #ffffff;
+}
+.markdown,
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6,
+.markdown pre,
+.markdown code,
+.markdown blockquote,
+.markdown em,
+.markdown strong,
+.markdown code {
+  font-size: 14px;
+  line-height: 28px;
+  font-weight: normal;
+  font-style: normal;
+  font-family: consolas, monaco, courier, "courier new", fixed-width;
+  color: #666666;
+}
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6,
+.markdown pre,
+.markdown code,
+.markdown blockquote,
+.markdown ol,
+.markdown ul,
+.markdown li,
+.markdown p,
+.markdown section,
+.markdown header,
+.markdown footer {
+  float: none;
+  margin: 0;
+  padding: 0;
+}
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6,
+.markdown ul,
+.markdown ol,
+.markdown pre,
+.markdown blockquote,
+.markdown div,
+.markdown p {
+  margin-top: 28px;
+  margin-bottom: 28px;
+}
+.markdown h1 {
+  position: relative;
+  line-height: 56px;
+  font-size: 28px;
+  color: #4271ae;
+}
+.markdown h1:before {
+  content: "# ";
+}
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  margin-bottom: 0;
+}
+.markdown h1 + *,
+.markdown h2 + *,
+.markdown h3 + *,
+.markdown h4 + *,
+.markdown h5 + *,
+.markdown h6 + * {
+  margin-top: 0;
+}
+.markdown h2 {
+  font-size: 21px;
+  color: #4271ae;
+}
+.markdown h3 {
+  font-size: 16.8px;
+  color: #4271ae;
+}
+.markdown h4 {
+  color: #3e999f;
+}
+.markdown h5 {
+  color: #3e999f;
+}
+.markdown h6 {
+  color: #3e999f;
+}
+.markdown h2:before,
+.markdown h3:before,
+.markdown h4:before,
+.markdown h5:before,
+.markdown h6:before {
+  content: "## ";
+}
+.markdown h3:before {
+  content: "### ";
+}
+.markdown h4:before {
+  content: "#### ";
+}
+.markdown h5:before {
+  content: "##### ";
+}
+.markdown h6:before {
+  content: "###### ";
+}
+.markdown li {
+  position: relative;
+  display: block;
+  padding-left: 28px;
+}
+.markdown li:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.markdown ul ul,
+.markdown ul ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown ul > li {
+  color: #93a1a1;
+}
+.markdown ul > li:before {
+  content: "*";
+}
+.markdown ol {
+  counter-reset: ol;
+}
+.markdown ol ul,
+.markdown ol ol {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.markdown ol > li {
+  color: #93a1a1;
+}
+.markdown ol > li:before {
+  content: counter(ol) ".";
+  counter-increment: ol;
+}
+.markdown pre {
+  margin-left: 28px;
+  color: #718c00;
+}
+.markdown blockquote {
+  position: relative;
+  padding-left: 14px;
+  overflow: hidden;
+  color: #93a1a1;
+}
+.markdown blockquote:after {
+  content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>";
+  white-space: pre;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  line-height: 28px;
+}
+.markdown strong {
+  font-weight: bold;
+  color: #c82829;
+}
+.markdown strong:before,
+.markdown strong:after {
+  content: "**";
+  display: inline;
+}
+.markdown em {
+  font-style: italic;
+  color: #c82829;
+}
+.markdown em:before,
+.markdown em:after {
+  content: "*";
+  display: inline;
+}
+.markdown a {
+  text-decoration: none;
+  color: #8959a8;
+}
+.markdown a:before {
+  content: "[";
+  display: inline;
+  color: #8959a8;
+}
+.markdown a:after {
+  content: "]";
+  display: inline;
+  color: #8959a8;
+}
+.markdown code {
+  font-weight: 100;
+  color: #718c00;
+}
+.markdown code:before,
+.markdown code:after {
+  content: "`";
+  display: inline;
+}
+.markdown pre code:before,
+.markdown pre code:after {
+  content: none;
+}
+.markdown hr {
+  position: relative;
+  height: 28px;
+  font-size: 0;
+  line-height: 0;
+  overflow: hidden;
+  border: 0;
+  margin-bottom: 28px;
+}
+.markdown hr:after {
+  content: "----------------------------------------------------------------------------------------------------";
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 14px;
+  line-height: 28px;
+  width: 100%;
+  word-wrap: break-word;
+  color: #cccccc;
+}
+.markdown table {
+  padding: 0;
+  margin-left: auto;
+  margin-right: auto;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.markdown table caption {
+  padding: 14px 0;
+}
+.markdown table thead th {
+  text-align: left;
+}
+.markdown table tbody {
+  margin: 0 14px;
+}
+.markdown table tbody tr:nth-child(odd) td,
+.markdown table tbody tr:nth-child(odd) th {
+  background-color: #f9f9f9;
+}
+.markdown table tbody tr:last-child td,
+.markdown table tbody tr:last-child th {
+  padding-bottom: 12px;
+}
+.markdown table td,
+.markdown table th {
+  padding: 14px 14px 13px;
+  border: 1px solid #dddddd;
+}
+.markdown textarea {
+  font-size: 14px;
+  line-height: 1.5;
+  border: 1px solid #888888;
+}
+@media (min-width: 824px) {
+  .markdown {
+    padding: 0 0 0 6px;
+    border-left: 1px dashed #cccccc;
+    /* reset outbox */
+  
+    /*
+          li {
+              padding-left: 0;
+              li {
+                  padding-left: @four-space;
+                  &:before {
+                      left: 0;
+                  }
+              }
+              &:before {
+                  left: -@four-space;
+              }
+          }
+          */
+  
+  }
+  .markdown h1 {
+    position: relative;
+  }
+  .markdown h1:before {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    padding-right: 14px;
+  }
+  .markdown h2,
+  .markdown h3,
+  .markdown h4,
+  .markdown h5,
+  .markdown h6 {
+    position: relative;
+  }
+  .markdown h2:before,
+  .markdown h3:before,
+  .markdown h4:before,
+  .markdown h5:before,
+  .markdown h6:before {
+    position: absolute;
+    top: 0;
+    right: 100%;
+    padding-right: 14px;
+  }
+  .markdown ul h2:before,
+  .markdown ol h2:before,
+  .markdown pre h2:before,
+  .markdown blockquote h2:before,
+  .markdown ul h3:before,
+  .markdown ol h3:before,
+  .markdown pre h3:before,
+  .markdown blockquote h3:before,
+  .markdown ul h4:before,
+  .markdown ol h4:before,
+  .markdown pre h4:before,
+  .markdown blockquote h4:before,
+  .markdown ul h5:before,
+  .markdown ol h5:before,
+  .markdown pre h5:before,
+  .markdown blockquote h5:before,
+  .markdown ul h6:before,
+  .markdown ol h6:before,
+  .markdown pre h6:before,
+  .markdown blockquote h6:before {
+    position: static;
+    padding-right: 0;
+  }
+}
+.markdown {
+  /* style for pagination */
+
+  /* style for comments */
+
+  /* style for code */
+
+}
+.markdown .pagination {
+  text-align: center;
+}
+.markdown .pagination ul > li,
+.markdown .pagination ol > li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+.markdown .pagination ul > li:before,
+.markdown .pagination ol > li:before {
+  display: none;
+}
+.markdown .commentlist div,
+.markdown .commentlist p {
+  margin: 0;
+}
+.markdown .commentlist > li {
+  margin-top: 28px;
+}
+.markdown .commentlist ul > li {
+  margin-top: 14px;
+}
+.markdown .commentlist .comment-author img {
+  float: left;
+  margin-right: 14px;
+}
+.markdown .commentlist .commentmetadata {
+  clear: left;
+}
+.markdown .commentlist #respond h3 {
+  margin-top: 0;
+}
+.markdown #respond p {
+  margin: 0;
+}
+.markdown #respond .comment-form-comment label {
+  display: none;
+}
+.markdown #respond .comment-form-comment textarea {
+  height: 105px;
+}
+.markdown #respond .form-allowed-tags {
+  display: none;
+}
+.markdown .syntaxhighlighter table code:before,
+.markdown .syntaxhighlighter table code:after {
+  content: none;
+}
+body {
+  margin: 0;
+}

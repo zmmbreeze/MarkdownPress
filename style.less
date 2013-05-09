@@ -1,0 +1,360 @@
+/* configs */
+@font-size: 14px;
+@line-height: 28px;
+@four-space: 28px;
+@ul-tick: "*";
+@strong-char: "**";
+@em-char: "*";
+
+// theme
+@color: #666;
+@color-back: #FFF;
+@color-h1: #4271ae;
+@color-h2: #4271ae;
+@color-h3: #4271ae;
+@color-h4: #3e999f;
+@color-h5: #3e999f;
+@color-h6: #3e999f;
+@color-strong: #c82829;
+@color-em: #c82829;
+@color-link: #8959a8;
+@color-hrule: #ccc;
+@color-ul: #93a1a1;
+@color-ol: #93a1a1;
+@color-code: #718c00;
+@color-blockquote: #93a1a1;
+@color-vline: #ccc; /* vertical line */
+@color-table-hover: #f9f9f9;
+@color-table-border: #ddd;
+@color-textarea: #888;
+
+
+@max-width: 600px;
+@true-max-width: (@max-width + (@font-size * 8 * 2));
+
+.markdown {
+
+    max-width: @max-width;
+    margin: 0 auto;
+    padding: 0;
+    // makes things like pre tags play more nicely with mobile
+    word-wrap: break-word;
+    background: @color-back;
+
+    &, h1, h2, h3, h4, h5, h6, pre, code, blockquote, em, strong, code {
+        font-size: @font-size;
+        line-height: @line-height;
+        font-weight: normal;
+        font-style: normal;
+        font-family: consolas,monaco,courier,"courier new",fixed-width;
+        color: @color;
+    }
+
+    h1, h2, h3, h4, h5, h6, pre, code, blockquote, ol, ul, li, p, section, header, footer {
+        float: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    h1, h2, h3, h4, h5, h6, ul, ol, pre, blockquote, div, p {
+        margin-top: @line-height;
+        margin-bottom: @line-height;
+    }
+
+    h1 {
+        position: relative;
+        line-height: @line-height * 2;
+        font-size: @font-size * 2;
+        color: @color-h1;
+
+        &:before {
+            content: "# ";
+        }
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin-bottom: 0;
+        & + * {
+            margin-top: 0;
+        }
+    }
+
+    h2 {
+        font-size: @font-size * 1.5;
+        color: @color-h2;
+    }
+    h3 {
+        font-size: @font-size * 1.2;
+        color: @color-h3;
+    }
+    h4 {
+        color: @color-h4;
+    }
+    h5 {
+        color: @color-h5;
+    }
+    h6 {
+        color: @color-h6;
+    }
+
+    h2:before,
+    h3:before,
+    h4:before,
+    h5:before,
+    h6:before {
+        content: "## ";
+    }
+    h3:before {
+        content: "### ";
+    }
+    h4:before {
+        content: "#### ";
+    }
+    h5:before {
+        content: "##### ";
+    }
+    h6:before {
+        content: "###### ";
+    }
+
+    li {
+        position: relative;
+        display: block;
+        padding-left: @four-space;
+    }
+    li:before {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    ul {
+        ul, ol {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    ul>li {
+        color: @color-ul;
+    }
+    ul>li:before {
+        content: @ul-tick;
+    }
+
+    ol {
+        // Auto-increments the numbering for ordered lists.
+        counter-reset:ol;
+        ul, ol {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+    }
+    ol>li {
+        color: @color-ol;
+    }
+    ol>li:before {
+        content: counter(ol) ".";
+        counter-increment: ol;
+    }
+
+    pre {
+        margin-left: @four-space;
+        color: @color-code;
+    }
+    blockquote {
+        position: relative;
+        padding-left: @four-space/2;
+        overflow: hidden;
+        color: @color-blockquote;
+
+        &:after {
+            // 100 lines max
+            // the \A becomes a newline character and `white-space: pre`
+            // makes it act like a <br>
+            content: ">\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>\A>";
+            white-space: pre;
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: @font-size;
+            line-height: @line-height;
+        }
+    }
+
+    strong {
+        font-weight: bold;
+        color: @color-strong;
+    }
+    strong:before, strong:after {
+        content: @strong-char;
+        display: inline;
+    }
+
+    em {
+        font-style: italic;
+        color: @color-em;
+    }
+    em:before, em:after {
+        content: @em-char;
+        display: inline;
+    }
+
+
+    a {
+        text-decoration: none;
+        color: @color-link;
+        &:before {
+            content: "[";
+            display: inline;
+            color: @color-link;
+        }
+        &:after {
+            content: "]";
+            // content: ~'"](" attr(href) ")"';
+            display: inline;
+            color: @color-link;
+        }
+    }
+
+    code {
+        font-weight: 100;
+        color: @color-code;
+    }
+
+    code:before,
+    code:after {
+        content: "`";
+        display: inline;
+    }
+
+    pre code:before,
+    pre code:after {
+        content: none;
+    }
+
+    hr {
+        position: relative;
+        height: @line-height;
+        font-size: 0;
+        line-height: 0;
+        overflow: hidden;
+        border: 0;
+        margin-bottom: @line-height;
+
+        &:after {
+            // 100 characters wide max
+            // older ie versions do not show the content
+            content: "----------------------------------------------------------------------------------------------------";
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: @font-size;
+            line-height: @line-height;
+            width: 100%;
+            word-wrap: break-word;
+            color: @color-hrule;
+        }
+    }
+
+    table {
+        padding: 0;
+        margin-left: auto;
+        margin-right: auto;
+        border-collapse: collapse;
+        border-spacing: 0;
+        caption {
+            padding: @line-height/2 0;
+        }
+        thead {
+            th {
+                text-align: left;
+            }
+        }
+        tbody {
+            margin: 0 @font-size;
+            tr:nth-child(odd) {
+                td, th {
+                    background-color: @color-table-hover;
+                }
+            }
+            tr:last-child {
+                td, th {
+                    padding-bottom: @line-height/2 - 2;
+                }
+            }
+        }
+        td, th {
+            padding: @line-height/2 @font-size @line-height/2-1;
+            border: 1px solid @color-table-border;
+        }
+    }
+
+    textarea {
+        font-size: @font-size;
+        line-height: 1.5;
+        border: 1px solid @color-textarea;
+    }
+}
+
+@media (min-width: @true-max-width) {
+    .markdown {
+        padding: 0 0 0 (@font-size/2 - 1);
+        border-left: 1px dashed @color-vline;
+
+        .util-outbox() {
+            position: absolute;
+            top: 0;
+            right: 100%;
+            padding-right: @font-size;
+        }
+        .reset-util-outbox() {
+            position: static;
+            padding-right: 0;
+        }
+
+        h1 {
+            position: relative;
+
+            &:before {
+                .util-outbox();
+            }
+        }
+
+        h2, h3, h4, h5, h6 {
+            position: relative;
+        }
+        h2:before,
+        h3:before,
+        h4:before,
+        h5:before,
+        h6:before {
+            .util-outbox();
+        }
+        /* reset outbox */
+        ul, ol, pre, blockquote {
+            h2:before,
+            h3:before,
+            h4:before,
+            h5:before,
+            h6:before {
+                .reset-util-outbox();
+            }
+        }
+
+        /*
+        li {
+            padding-left: 0;
+            li {
+                padding-left: @four-space;
+                &:before {
+                    left: 0;
+                }
+            }
+            &:before {
+                left: -@four-space;
+            }
+        }
+        */
+    }
+}
+
+@import "./style-extra.less";

@@ -1,0 +1,70 @@
+.markdown {
+    /* style for pagination */
+    .pagination {
+        text-align: center;
+        ul>li,
+        ol>li {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+            &:before {
+                display: none;
+            }
+        }
+    }
+
+    /* style for comments */
+    .commentlist {
+        div, p {
+            margin: 0;
+        }
+         > li {
+            margin-top: @line-height;
+        }
+        ul > li {
+            margin-top: @font-size;
+        }
+        .comment-author {
+            img {
+                float: left;
+                margin-right: 14px;
+            }
+        }
+        .commentmetadata {
+            clear:left;
+        }
+        #respond {
+            h3 {
+                margin-top: 0;
+            }
+        }
+    }
+    #respond {
+        p {
+            margin: 0;
+        }
+        .comment-form-comment {
+            label {
+                display: none;
+            }
+            textarea {
+                height: @font-size * 1.5 * 5;
+            }
+        }
+        .form-allowed-tags {
+            display: none;
+        }
+    }
+
+    /* style for code */
+    .syntaxhighlighter table code {
+        &:before,
+        &:after {
+            content: none;
+        }
+    }
+}
+
+body {
+    margin: 0;
+}
