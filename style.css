@@ -381,6 +381,8 @@ Tags: white， one-columns， responsive
 
   /* style for code */
 
+  /* style for comment-form */
+
 }
 .markdown .main-articles li time {
   display: block;
@@ -466,6 +468,16 @@ Tags: white， one-columns， responsive
 .markdown .syntaxhighlighter table code:before,
 .markdown .syntaxhighlighter table code:after {
   content: none;
+}
+.markdown #commentform label {
+  float: left;
+  width: 75px;
+}
+.markdown #commentform input[type=text] {
+  width: 320px;
+}
+.markdown #commentform textarea {
+  width: 395px;
 }
 @media (min-width: 824px) {
   .markdown {
