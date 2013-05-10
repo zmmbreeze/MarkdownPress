@@ -19,7 +19,6 @@ get_header(); ?>
         <?php comments_template( '', true ); ?>
     <?php endwhile; // end of the loop. ?>
 </div><!-- .main -->
-</div><!-- .left -->
 
 <?php get_sidebar(); ?>
 <?php get_footer(); ?>

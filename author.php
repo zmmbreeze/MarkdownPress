@@ -18,7 +18,7 @@ get_header(); ?>
         <li>
             <a href="<?php the_permalink() ?>" rel="bookmark"><?php the_title(); ?></a>
             <span><?php comments_number( '', '(1)', '(%)' ); ?> </span>
-            <time><?php the_modified_date('Y-m-d') ?><!--日期--></time>
+            <time><?php the_modified_date('Y-m-d') ?></time>
         </li>
         <?php endwhile; ?>
     </ol>

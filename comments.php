@@ -29,7 +29,7 @@
 	<?php if ( have_comments() ) : ?>
 		<h2 id="comments-title">
 			<?php
-				printf( _n( '有1条评论', '有%1$s条评论', get_comments_number(), 'toolbox' ),
+				printf( _n( '1 Comments', '%1$s Comments', get_comments_number(), 'toolbox' ),
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
 		</h2>
@@ -62,7 +62,7 @@
 		// If comments are closed and there are no comments, let's leave a little note, shall we?
 		if ( ! comments_open() && '0' != get_comments_number() && post_type_supports( get_post_type(), 'comments' ) ) :
 	?>
-		<p class="nocomments"><?php _e( '评论已关闭。', 'toolbox' ); ?></p>
+		<p class="nocomments"><?php _e( 'Comments are closed.', 'toolbox' ); ?></p>
 	<?php endif; ?>
 
 	<?php comment_form(); ?>

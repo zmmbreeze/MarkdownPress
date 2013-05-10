@@ -29,7 +29,7 @@
             if ( ! toolbox_categorized_blog() ) {
                 // This blog only has 1 category so we just need to worry about tags in the meta text
                 if ( '' != $tag_list ) {
-                    $meta_text = __( '标签 %2$s<br/>', 'toolbox' );
+                    $meta_text = __( 'Tagged %2$s<br/>', 'toolbox' );
                 } else {
                     $meta_text = __( '', 'toolbox' );
                 }
@@ -37,9 +37,9 @@
             } else {
                 // But this blog has loads of categories so we should probably display them here
                 if ( '' != $tag_list ) {
-                    $meta_text = __( '类别 %1$s<br/>标签 %2$s<br/>', 'toolbox' );
+                    $meta_text = __( 'Posted in %1$s<br/>Tagged %2$s<br/>', 'toolbox' );
                 } else {
-                    $meta_text = __( '类别 %1$s<br/>', 'toolbox' );
+                    $meta_text = __( 'Posted in %1$s<br/>', 'toolbox' );
                 }
 
             } // end check for categories on this blog
