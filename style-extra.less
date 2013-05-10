@@ -1,4 +1,11 @@
 .markdown {
+    /* main-articles */
+    .main-articles {
+        li time {
+            display: block;
+        }
+    }
+
     /* style for pagination */
     .pagination {
         text-align: center;
@@ -21,17 +28,44 @@
          > li {
             margin-top: @line-height;
         }
-        ul > li {
-            margin-top: @font-size;
+        ul {
+            border-left: 1px dashed @color-vline;
+
+            > li {
+                margin-top: @font-size;
+                margin-left: @line-height;
+                &:before {
+                    content: '';
+                }
+            }
         }
         .comment-author {
+            display: inline;
             img {
                 float: left;
-                margin-right: 14px;
+                margin-right: @font-size;
+                width: @line-height * 2;
+                height: @line-height * 2;
             }
         }
         .commentmetadata {
-            clear:left;
+            display: inline;
+            font-size: 12px;
+            color: @color-ol;
+        }
+        .comment-content {
+            overflow: hidden;
+        }
+        .reply {
+            height: @line-height;
+            a {
+                position: absolute;
+                left: 28px;
+                width: 56px;
+                text-align: center;
+            }
+        }
+        footer {
         }
         #respond {
             h3 {
@@ -61,6 +95,17 @@
         &:before,
         &:after {
             content: none;
+        }
+    }
+}
+
+@media (min-width: @true-max-width) {
+    .markdown {
+        /* main-articles */
+        .main-articles {
+            li time {
+                display: inline;
+            }
         }
     }
 }

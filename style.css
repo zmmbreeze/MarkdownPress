@@ -12,7 +12,7 @@ Tags: white， one-columns， responsive
 .markdown {
   max-width: 600px;
   margin: 0 auto;
-  padding: 0;
+  padding: 0 14px;
   word-wrap: break-word;
   background: #ffffff;
 }
@@ -368,12 +368,17 @@ Tags: white， one-columns， responsive
   }
 }
 .markdown {
+  /* main-articles */
+
   /* style for pagination */
 
   /* style for comments */
 
   /* style for code */
 
+}
+.markdown .main-articles li time {
+  display: block;
 }
 .markdown .pagination {
   text-align: center;
@@ -395,15 +400,41 @@ Tags: white， one-columns， responsive
 .markdown .commentlist > li {
   margin-top: 28px;
 }
+.markdown .commentlist ul {
+  border-left: 1px dashed #cccccc;
+}
 .markdown .commentlist ul > li {
   margin-top: 14px;
+  margin-left: 28px;
+}
+.markdown .commentlist ul > li:before {
+  content: '';
+}
+.markdown .commentlist .comment-author {
+  display: inline;
 }
 .markdown .commentlist .comment-author img {
   float: left;
   margin-right: 14px;
+  width: 56px;
+  height: 56px;
 }
 .markdown .commentlist .commentmetadata {
-  clear: left;
+  display: inline;
+  font-size: 12px;
+  color: #93a1a1;
+}
+.markdown .commentlist .comment-content {
+  overflow: hidden;
+}
+.markdown .commentlist .reply {
+  height: 28px;
+}
+.markdown .commentlist .reply a {
+  position: absolute;
+  left: 28px;
+  width: 56px;
+  text-align: center;
 }
 .markdown .commentlist #respond h3 {
   margin-top: 0;
@@ -423,6 +454,15 @@ Tags: white， one-columns， responsive
 .markdown .syntaxhighlighter table code:before,
 .markdown .syntaxhighlighter table code:after {
   content: none;
+}
+@media (min-width: 824px) {
+  .markdown {
+    /* main-articles */
+  
+  }
+  .markdown .main-articles li time {
+    display: inline;
+  }
 }
 body {
   margin: 0;
