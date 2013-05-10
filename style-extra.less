@@ -52,6 +52,12 @@
             display: inline;
             font-size: 12px;
             color: @color-ol;
+            a {
+                color: @color-ol;
+                &:before, &:after {
+                    content: "";
+                }
+            }
         }
         .comment-content {
             overflow: hidden;
@@ -64,8 +70,6 @@
                 width: 56px;
                 text-align: center;
             }
-        }
-        footer {
         }
         #respond {
             h3 {

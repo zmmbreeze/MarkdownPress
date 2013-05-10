@@ -290,6 +290,7 @@ Tags: white， one-columns， responsive
   padding: 14px 14px 13px;
   border: 1px solid #dddddd;
 }
+.markdown input[type=text],
 .markdown textarea {
   font-size: 14px;
   line-height: 1.5;
@@ -423,6 +424,13 @@ Tags: white， one-columns， responsive
   display: inline;
   font-size: 12px;
   color: #93a1a1;
+}
+.markdown .commentlist .commentmetadata a {
+  color: #93a1a1;
+}
+.markdown .commentlist .commentmetadata a:before,
+.markdown .commentlist .commentmetadata a:after {
+  content: "";
 }
 .markdown .commentlist .comment-content {
   overflow: hidden;
