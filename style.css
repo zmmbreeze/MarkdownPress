@@ -75,7 +75,7 @@ Tags: white， one-columns， responsive
   position: relative;
   line-height: 56px;
   font-size: 28px;
-  color: #177cb0;
+  color: #4271ae;
 }
 .markdown h1:before {
   content: "# ";
@@ -98,11 +98,11 @@ Tags: white， one-columns， responsive
 }
 .markdown h2 {
   font-size: 21px;
-  color: #177cb0;
+  color: #4271ae;
 }
 .markdown h3 {
   font-size: 16.8px;
-  color: #177cb0;
+  color: #4271ae;
 }
 .markdown h4 {
   color: #3e999f;
@@ -170,7 +170,7 @@ Tags: white， one-columns， responsive
 }
 .markdown pre {
   margin-left: 28px;
-  color: #789262;
+  color: #718c00;
   font-family: consolas, monaco, courier, "courier new", fixed-width;
 }
 .markdown blockquote {
@@ -234,7 +234,7 @@ Tags: white， one-columns， responsive
 .markdown code {
   font-weight: 100;
   font-family: consolas, monaco, courier, "courier new", fixed-width;
-  color: #789262;
+  color: #718c00;
 }
 .markdown code:before,
 .markdown code:after {
