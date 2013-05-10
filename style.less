@@ -17,11 +17,11 @@ Tags: white， one-columns， responsive
 @em-char: "*";
 
 // theme
-@color: #666;
+@color: #424B50;
 @color-back: #FFF;
-@color-h1: #4271ae;
-@color-h2: #4271ae;
-@color-h3: #4271ae;
+@color-h1: #177CB0;
+@color-h2: #177CB0;
+@color-h3: #177CB0;
 @color-h4: #3e999f;
 @color-h5: #3e999f;
 @color-h6: #3e999f;
@@ -31,13 +31,21 @@ Tags: white， one-columns， responsive
 @color-hrule: #ccc;
 @color-ul: #93a1a1;
 @color-ol: #93a1a1;
-@color-code: #718c00;
+@color-code: #789262;
 @color-blockquote: #93a1a1;
 @color-vline: #ccc; /* vertical line */
 @color-table-hover: #f9f9f9;
 @color-table-border: #ddd;
 @color-textarea: #888;
 
+@font-family:
+    "ff-tisa-web-pro-1","ff-tisa-web-pro-2",
+    "Lucida Grande",
+    "Hiragino Sans GB","Hiragino Sans GB W3",
+    "Microsoft YaHei",
+    "wenquanyi micro hei",
+    sans-serif;
+@code-font-family: consolas,monaco,courier,"courier new",fixed-width;
 
 @max-width: 600px;
 @true-max-width: (@max-width + (@font-size * 8 * 2));
@@ -56,7 +64,7 @@ Tags: white， one-columns， responsive
         line-height: @line-height;
         font-weight: normal;
         font-style: normal;
-        font-family: consolas,monaco,courier,"courier new",fixed-width;
+        font-family: @font-family;
         color: @color;
     }
 
@@ -169,6 +177,7 @@ Tags: white， one-columns， responsive
     pre {
         margin-left: @four-space;
         color: @color-code;
+        font-family: @code-font-family;
     }
     blockquote {
         position: relative;
@@ -222,11 +231,13 @@ Tags: white， one-columns， responsive
         &:before {
             content: "[";
             display: inline;
+            font-family: @code-font-family;
             color: @color-link;
         }
         &:after {
             content: "]";
             // content: ~'"](" attr(href) ")"';
+            font-family: @code-font-family;
             display: inline;
             color: @color-link;
         }
@@ -234,6 +245,7 @@ Tags: white， one-columns， responsive
 
     code {
         font-weight: 100;
+        font-family: @code-font-family;
         color: @color-code;
     }
 
