@@ -9,9 +9,9 @@ Tags: white, one-column, flexible-width
 */
 
 /* configs */
-@font-size: 14px;
-@line-height: 28px;
-@four-space: 28px;
+@font-size: 16px;
+@line-height: 32px;
+@four-space: 32px;
 @ul-tick: "*";
 @strong-char: "**";
 @em-char: "*";
@@ -47,7 +47,7 @@ Tags: white, one-column, flexible-width
     sans-serif;
 @code-font-family: consolas,monaco,courier,"courier new",fixed-width;
 
-@max-width: 600px;
+@max-width: @font-size * 45;
 @true-max-width: (@max-width + (@font-size * 8 * 2));
 
 .markdown {
@@ -89,7 +89,7 @@ Tags: white, one-column, flexible-width
             content: "# ";
         }
     }
-    h1, h2, h3, h4, h5, h6 {
+    h1 {
         margin-bottom: 0;
         & + * {
             margin-top: 0;
@@ -246,6 +246,7 @@ Tags: white, one-column, flexible-width
     code {
         font-weight: 100;
         font-family: @code-font-family;
+        font-style: italic;
         color: @color-code;
     }
 
@@ -321,6 +322,15 @@ Tags: white, one-column, flexible-width
         font-size: @font-size;
         line-height: 1.5;
         border: 1px solid @color-textarea;
+    }
+
+    img {
+        max-width: @max-width;
+        -webkit-box-shadow: 1px 1px 5px #CCC;
+        -moz-box-shadow: 1px 1px 5px #CCC;
+        -ms-box-shadow: 1px 1px 5px #CCC;
+        -o-box-shadow: 1px 1px 5px #CCC;
+        box-shadow: 1px 1px 5px #CCC;
     }
 }
 
