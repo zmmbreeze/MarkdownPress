@@ -74,9 +74,17 @@ Tags: white, one-column, flexible-width
         padding: 0;
     }
 
-    h1, h2, h3, h4, h5, h6, ul, ol, pre, blockquote, div, p {
+    ul, ol, pre, blockquote, div, p {
         margin-top: @line-height;
         margin-bottom: @line-height;
+    }
+
+    h1, h2, h3, h4, h5, h6, {
+        margin-top: @line-height;
+        margin-bottom: 0;
+        & + * {
+            margin-top: 0;
+        }
     }
 
     h1 {
@@ -84,6 +92,14 @@ Tags: white, one-column, flexible-width
         line-height: @line-height * 2;
         font-size: @font-size * 2;
         color: @color-h1;
+        strong, a, em, code {
+            font-weight: normal;
+            font-size: 1em;
+            color: @color-h1;
+            &:before, &:after {
+                content: "";
+            }
+        }
 
         &:before {
             content: "# ";
@@ -99,19 +115,59 @@ Tags: white, one-column, flexible-width
     h2 {
         font-size: @font-size * 1.5;
         color: @color-h2;
+        strong, a, em, code {
+            font-weight: normal;
+            font-size: 1em;
+            color: @color-h2;
+            &:before, &:after {
+                content: "";
+            }
+        }
     }
     h3 {
         font-size: @font-size * 1.2;
         color: @color-h3;
+        strong, a, em, code {
+            font-weight: normal;
+            font-size: 1em;
+            color: @color-h3;
+            &:before, &:after {
+                content: "";
+            }
+        }
     }
     h4 {
         color: @color-h4;
+        strong, a, em, code {
+            font-weight: normal;
+            font-size: 1em;
+            color: @color-h3;
+            &:before, &:after {
+                content: "";
+            }
+        }
     }
     h5 {
         color: @color-h5;
+        strong, a, em, code {
+            font-weight: normal;
+            font-size: 1em;
+            color: @color-h3;
+            &:before, &:after {
+                content: "";
+            }
+        }
     }
     h6 {
         color: @color-h6;
+        strong, a, em, code {
+            font-weight: normal;
+            font-size: 1em;
+            color: @color-h3;
+            &:before, &:after {
+                content: "";
+            }
+        }
     }
 
     h2:before,

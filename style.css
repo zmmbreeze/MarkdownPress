@@ -56,12 +56,6 @@ Tags: white, one-column, flexible-width
   margin: 0;
   padding: 0;
 }
-.markdown h1,
-.markdown h2,
-.markdown h3,
-.markdown h4,
-.markdown h5,
-.markdown h6,
 .markdown ul,
 .markdown ol,
 .markdown pre,
@@ -71,11 +65,46 @@ Tags: white, one-column, flexible-width
   margin-top: 32px;
   margin-bottom: 32px;
 }
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4,
+.markdown h5,
+.markdown h6 {
+  margin-top: 32px;
+  margin-bottom: 0;
+}
+.markdown h1 + *,
+.markdown h2 + *,
+.markdown h3 + *,
+.markdown h4 + *,
+.markdown h5 + *,
+.markdown h6 + * {
+  margin-top: 0;
+}
 .markdown h1 {
   position: relative;
   line-height: 64px;
   font-size: 32px;
   color: #4271ae;
+}
+.markdown h1 strong,
+.markdown h1 a,
+.markdown h1 em,
+.markdown h1 code {
+  font-weight: normal;
+  font-size: 1em;
+  color: #4271ae;
+}
+.markdown h1 strong:before,
+.markdown h1 a:before,
+.markdown h1 em:before,
+.markdown h1 code:before,
+.markdown h1 strong:after,
+.markdown h1 a:after,
+.markdown h1 em:after,
+.markdown h1 code:after {
+  content: "";
 }
 .markdown h1:before {
   content: "# ";
@@ -90,18 +119,108 @@ Tags: white, one-column, flexible-width
   font-size: 24px;
   color: #4271ae;
 }
+.markdown h2 strong,
+.markdown h2 a,
+.markdown h2 em,
+.markdown h2 code {
+  font-weight: normal;
+  font-size: 1em;
+  color: #4271ae;
+}
+.markdown h2 strong:before,
+.markdown h2 a:before,
+.markdown h2 em:before,
+.markdown h2 code:before,
+.markdown h2 strong:after,
+.markdown h2 a:after,
+.markdown h2 em:after,
+.markdown h2 code:after {
+  content: "";
+}
 .markdown h3 {
   font-size: 19.2px;
   color: #4271ae;
 }
+.markdown h3 strong,
+.markdown h3 a,
+.markdown h3 em,
+.markdown h3 code {
+  font-weight: normal;
+  font-size: 1em;
+  color: #4271ae;
+}
+.markdown h3 strong:before,
+.markdown h3 a:before,
+.markdown h3 em:before,
+.markdown h3 code:before,
+.markdown h3 strong:after,
+.markdown h3 a:after,
+.markdown h3 em:after,
+.markdown h3 code:after {
+  content: "";
+}
 .markdown h4 {
   color: #3e999f;
+}
+.markdown h4 strong,
+.markdown h4 a,
+.markdown h4 em,
+.markdown h4 code {
+  font-weight: normal;
+  font-size: 1em;
+  color: #4271ae;
+}
+.markdown h4 strong:before,
+.markdown h4 a:before,
+.markdown h4 em:before,
+.markdown h4 code:before,
+.markdown h4 strong:after,
+.markdown h4 a:after,
+.markdown h4 em:after,
+.markdown h4 code:after {
+  content: "";
 }
 .markdown h5 {
   color: #3e999f;
 }
+.markdown h5 strong,
+.markdown h5 a,
+.markdown h5 em,
+.markdown h5 code {
+  font-weight: normal;
+  font-size: 1em;
+  color: #4271ae;
+}
+.markdown h5 strong:before,
+.markdown h5 a:before,
+.markdown h5 em:before,
+.markdown h5 code:before,
+.markdown h5 strong:after,
+.markdown h5 a:after,
+.markdown h5 em:after,
+.markdown h5 code:after {
+  content: "";
+}
 .markdown h6 {
   color: #3e999f;
+}
+.markdown h6 strong,
+.markdown h6 a,
+.markdown h6 em,
+.markdown h6 code {
+  font-weight: normal;
+  font-size: 1em;
+  color: #4271ae;
+}
+.markdown h6 strong:before,
+.markdown h6 a:before,
+.markdown h6 em:before,
+.markdown h6 code:before,
+.markdown h6 strong:after,
+.markdown h6 a:after,
+.markdown h6 em:after,
+.markdown h6 code:after {
+  content: "";
 }
 .markdown h2:before,
 .markdown h3:before,
@@ -206,8 +325,6 @@ Tags: white, one-column, flexible-width
   display: inline;
 }
 .markdown a {
-  position: relative;
-  padding: 0 4px;
   text-decoration: none;
   color: #8959a8;
 }
